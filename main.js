@@ -1,6 +1,6 @@
 //=======================================
 // added to require inquirer for npm install and npm start to initialize and added const for shapes and createShapes
-//=======================================
+//======================================= -NAS
 const inquirer = require('inquirer');
 const {square, circle, triangle} = require('./Assets/shape');
 const createPrompt = inquirer.createPromptModule();
@@ -8,7 +8,7 @@ const createPrompt = inquirer.createPromptModule();
 //=====================================
 // below is a list of questions that the user will be required to answer
 // in order to create their logo.
-//=====================================
+//===================================== -NAS
 function startInformation(){
     createPrompt([
         {
@@ -40,7 +40,7 @@ function startInformation(){
 //
 // used https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch and https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then
 //
-//=================================
+//================================= -NAS
     .then(({text, color, shape}) => {
         prompt({ type: 'list', name: 'shape', message: 'Please chose a shape from the lest provided.', choices: ['square', 'circle', 'triangle']})
         .then(async function ({createShape}) {
@@ -73,9 +73,9 @@ function startInformation(){
 //================================
 // below I am calling the startInformation function which is what is
 // used to start the logo creation
-//================================
+//================================ -NAS
 startInformation()
 
 //================================
 // DONE
-//================================
+//================================ -NAS

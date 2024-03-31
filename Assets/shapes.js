@@ -1,6 +1,6 @@
 //===============================
 // added below to create shapes using constructor and this. 
-//===============================
+//=============================== -NAS
 class createShapes {
     constructor(text, color){
         this.text = text
@@ -17,7 +17,7 @@ class createShapes {
 // of the desired shape.
 //
 // used https://www.w3schools.com/graphics/svg_circle.asp , https://www.w3schools.com/graphics/svg_polygon.asp , and https://www.w3schools.com/react/react_render.asp
-//===============================
+//=============================== -NAS
 class square extends createShapes{
     render() {
         return `<polygon points="10,10 200,10 200,200 10,200" + this.text + this.color  />`;
@@ -38,9 +38,9 @@ class triangle extends createShapes{
 
 //================================
 // below is used to export shape classes as defined above
-//================================
+//================================ -NAS
 module.exports = {square, circle, triangle};
 
 //================================
 // DONE
-//================================
+//================================ -NAS
