@@ -3,16 +3,14 @@
 //=======================================
 const inquirer = require('inquirer');
 const {square, circle, triangle} = require('./Assets/shape');
-const { async } = require('rxjs');
-const { square } = require('./Assets/shapes');
-const createShape = inquirer.createPromptMpdule();
+const createPrompt = inquirer.createPromptModule();
 
 //=====================================
 // below is a list of questions that the user will be required to answer
 // in order to create their logo.
 //=====================================
 function startInformation(){
-    prompt([
+    createPrompt([
         {
             type:'input',
             name:'text',
