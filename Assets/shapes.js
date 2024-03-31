@@ -11,7 +11,7 @@ const createShapes {
 //===============================
 // added below to create each shape. for class square extend is used to denote square is a child of createShapes
 // then render and return are used in conjuncture with polygon points to define the border of the created shape.
-// fill is then used to color the created shape.
+// this.text and this.color used to insert text and color into logo.
 // 
 // same method is repeated for circle and triangle below with small variations related to the actual construction
 // of the desired shape.
@@ -20,19 +20,19 @@ const createShapes {
 //===============================
 class square extends createShapes{
     render() {
-        return `<polygon points="10,10 200,10 200,200 10,200" fill="blue" />`;
+        return `<polygon points="10,10 200,10 200,200 10,200" + this.text + this.color  />`;
     }
 }
 
 class circle extends createShapes{
     render() {
-        return `<circle cx="150" cy="100" r="80" fill="green" />`;
+        return `<circle cx="150" cy="100" r="80" + this.text + this.color  />`;
     }
 }
 
 class triangle extends createShapes{
     render() {
-        return `<polygon points="100,10 190,190 10,190" fill="red" />`;
+        return `<polygon points="100,10 190,190 10,190" + this.text + this.color />`;
     }
 }
 

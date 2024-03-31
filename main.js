@@ -3,8 +3,14 @@
 //=======================================
 const inquirer = require('inquirer');
 const {square, circle, triangle} = require('./Assets/shape');
+const { async } = require('rxjs');
+const { square } = require('./Assets/shapes');
 const createShape = inquirer.createPromptMpdule();
 
+//=====================================
+// below is a list of questions that the user will be required to answer
+// in order to create their logo.
+//=====================================
 function startInformation(){
     prompt([
         {
@@ -21,9 +27,57 @@ function startInformation(){
 
         {
             type:'list',
-            name:'text',
+            name:'shape',
             message:'What shape would you like your logo to be?',
             choices:['square', 'circle', 'triangle']
         },
     ])
+
+//================================
+// .then is used with promises from above questions
+// after .then async function is used to createShape from the shapes.js
+// switch is used to evaluate an expression, the expressions are listed
+// as cases. below are the three cases, square, circle, and triangle
+// default is used if the expression entered does not fit acceptance criteria
+//
+// used https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch and https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then
+//
+//=================================
+    .then(({text, color, shape}) => {
+        prompt({ type: 'list', name: 'shape', message: 'Please chose a shape from the lest provided.', choices: ['square', 'circle', 'triangle']})
+        .then(async function ({createShape}) {
+            console.log(createShape)
+            switch (createShape) {
+                case 'square':
+                    const square = new square(text, color, shape)
+                    const showSquare = square.render()
+                    console.log(showSquare)
+
+                    break;
+                case 'circle':
+                    const circle = new circle(text, color, shape)
+                    const showCircle = circle.render()
+                    console.log(showCircle)
+
+                    break;
+                case 'triangle':
+                    const triangle = new triangle(text, color, shape)
+                    const showTriangle = triangle.render()
+                    console.log(showTriangle)
+
+                    break;
+                default:
+            }
+        })
+    })
 }
+
+//================================
+// below I am calling the startInformation function which is what is
+// used to start the logo creation
+//================================
+startInformation()
+
+//================================
+// DONE
+//================================
