@@ -17,7 +17,6 @@ const createShapes {
 // of the desired shape.
 //
 // used https://www.w3schools.com/graphics/svg_circle.asp , https://www.w3schools.com/graphics/svg_polygon.asp , and https://www.w3schools.com/react/react_render.asp
-//
 //===============================
 class square extends createShapes{
     render() {
