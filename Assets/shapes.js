@@ -1,7 +1,7 @@
 //===============================
 // added below to create shapes using constructor and this. 
 //===============================
-const createShapes {
+class createShapes {
     constructor(text, color){
         this.text = text
         this.color = color
