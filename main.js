@@ -47,19 +47,19 @@ function startInformation(){
             console.log(createShape)
             switch (createShape) {
                 case 'square':
-                    const square = new square(text, color, shape)
+                    const square = new Square(text, color, shape)
                     const showSquare = square.render()
                     console.log(showSquare)
 
                     break;
                 case 'circle':
-                    const circle = new circle(text, color, shape)
+                    const circle = new Circle(text, color, shape)
                     const showCircle = circle.render()
                     console.log(showCircle)
 
                     break;
                 case 'triangle':
-                    const triangle = new triangle(text, color, shape)
+                    const triangle = new Triangle(text, color, shape)
                     const showTriangle = triangle.render()
                     console.log(showTriangle)
 

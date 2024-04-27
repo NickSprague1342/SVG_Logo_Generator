@@ -10,6 +10,10 @@
 
 ## Instructions for Use
 ```
+- Run npm install to install required packages.
+- Run node main.js
+- Answer required questions
+- View your new SVG logo!
 ```
 
 ## Technologies Used
